@@ -29,7 +29,7 @@ Tli493d::Tli493d(int powerPin, bool powerLevel, AccessMode_e mode, TypeAddress_e
 
 Tli493d::~Tli493d(void)
 {
-	mInterface.bus->end();
+	//mInterface.bus->end();
 }
 
 void Tli493d::begin(void)
@@ -475,8 +475,8 @@ void Tli493d::resetSensor()
 	mInterface.bus->beginTransmission(0x00);
 	mInterface.bus->endTransmission();
 	//If the uC has problems with this sequence: reset TwoWire-module.
-	mInterface.bus->end();
-	mInterface.bus->begin();
+	//mInterface.bus->end();
+	//mInterface.bus->begin();
 
 	delayMicroseconds(TLI493D_RESETDELAY);
 }
