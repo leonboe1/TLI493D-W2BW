@@ -341,8 +341,8 @@ class Tli493d
 	uint8_t getRegBits(uint8_t regMaskIndex);
 
   private:
-	const TypeAddress_e mProductType;
 	AccessMode_e mMode;
+	const TypeAddress_e mProductType;
 	int mPowerPin;
 	bool mPowerLevel;
 	int16_t mXdata;
